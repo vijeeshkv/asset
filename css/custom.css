@@ -1,0 +1,151 @@
+/*!
+ * Custom css file for styles
+ * Created by vijeesh.
+ * Created on : 26-06-2012
+ */ 
+
+#footer {
+	color: #666;
+	background: #ffcc00;
+	border-top: 1px solid #ffcc00;
+	 height: 60px;
+}
+#footer a {
+	color: #666;
+}
+#footer a:hover {
+	color: #000;
+}
+
+ @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+  }
+  
+  .sidetopwidth {
+      
+      padding-top: 40px;
+  }
+  .sideleftwidth {
+      
+      padding-left: 40px;
+  }
+  .bottompad {
+      padding-bottom: 10px;  
+  }
+  
+  .tblborder {
+      
+      border: 5px solid #ffcc00;
+  }
+  
+  .smalldropdown {
+      
+      width:80px;
+      
+  }
+  .leftpad {
+    padding-left: 10px;   
+  }  
+  .rightpad {
+    padding-right: 10px;   
+  }  
+  .btnleft {
+      float: right;
+      padding-right:10px;
+  }
+  .gmap {
+      
+      border: 5px solid #ffcc00;
+      vertical-align: top right ;
+  }
+  
+  .smallbox {
+      background-color: #ffcc00; 
+      height: 25px; 
+      width:160px; 
+      font-weight: bold; 
+      padding-left: 10px; 
+      padding-top: 5px; 
+      color: #FFF;
+  }
+  .placeholder {
+      
+      border: 1px solid #ccc;
+      max-height: 250px; 
+      max-width: 250px;
+      float: left;
+  }
+  
+  .placeholderrght {
+      
+      border: 0px solid #ccc;
+      max-height: 250px; 
+      max-width: 250px;
+      float: left;
+  }
+  
+  .smallboxright {
+      background-color: #ffcc00; 
+      height: 20px; 
+      width:160px; 
+      font-weight: bold; 
+      padding-left: 10px; 
+      padding-top: 2px;
+      padding-bottom: 2px;
+      color: #FFF;
+      float: right;
+      margin-left:10px; 
+      text-align: center;
+      font-size: 12px;
+      
+  }
+  .smallboxright a {
+       color: #FFF;
+  }
+  .graphplaceholder {
+      border: 1px solid #ccc;
+      height: 350px; 
+      width:800px;
+      
+  }
+  
+  .topline {
+      
+      border-top: 5px solid #ffcc00;
+  }
+  .imgmaxwidthheight {
+      
+      max-width:200px; 
+      max-height: 200px;
+      border: 5px solid #ffcc00;
+  }
+  .alertaimgmaxwh {
+      
+      max-width:371px; 
+      max-height: 350px;
+      border: 5px solid #ffcc00;
+  }
+  #alertlist_info, #tbl-ranges_info {
+      padding-left: 28px;
+  }
+  #alertlist_length, #tbl-ranges_length {
+      padding-left: 28px;
+  }
+  /*#alertlist_processing {
+      padding-left: 28px;
+  }*/
+ .sorting {
+    background: url("../img/sort_both.png") no-repeat scroll right center transparent;
+}
+.sorting_asc {
+    background: url("../img/sort_asc.png") no-repeat scroll right center transparent;
+}
+.sorting_desc {
+    background: url("../img/sort_desc.png") no-repeat scroll right center transparent;
+}
+  
