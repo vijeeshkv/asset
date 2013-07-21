@@ -1,7 +1,7 @@
 function login()
 {
     $("#ajax").hide();
-    $("#ajax").load("admin/auth/login/", function(data) {
+    $("#ajax").load("auth/login/", function(data) {
         if(data.indexOf("logedin") >= 0){
             $(location).attr('href',"admin/auth");
         }else{
