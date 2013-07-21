@@ -3,10 +3,9 @@
  * Created by vijeesh.
  * Created on : 26-06-2012
  */ 
-
 #footer {
-	color: #666;
-	background: #ffcc00;
+	color: #FFF;
+	background: #222;
 	border-top: 1px solid #ffcc00;
 	 height: 60px;
 }

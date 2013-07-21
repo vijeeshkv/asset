@@ -12,10 +12,10 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
                 $this->data['site_title'] = $this->config->item('site_title', 'ion_auth'); 
-                $this->load->view('header'); 
+                $this->load->view('header',$this->data); 
                 $this->load->view('welcome/nav', $this->data); 
-				$this->load->view('welcome/welcome_message');
-                $this->load->view('footer'); 
+				$this->load->view('welcome/welcome');
+                $this->load->view('footer',$this->data); 
 	}
 }
 

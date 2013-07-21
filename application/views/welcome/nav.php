@@ -6,8 +6,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#"><?php echo $site_title; ?></a>
-          <!--<div class="nav-collapse collapse">
+		  <a href="<?php echo base_url(); ?>" alt="<?php echo $site_title; ?>"><img src="<?php echo base_url(); ?>uploads/logos/newlogo.png" /></a>
+          
+          <!--<a class="brand" href="#"><?php //echo $site_title; ?></a>
+		  <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
@@ -34,4 +36,3 @@
         </div>
       </div>
     </div>
-<div class="container">
