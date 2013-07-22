@@ -6,8 +6,10 @@ class Auth extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->library('ion_auth');
+		$this->load->library('session');
 		$this->load->library('form_validation');
 		$this->load->helper('url');
+		$this->load->model('user');
 
 		// Load MongoDB library instead of native db driver if required
 		$this->config->item('use_mongodb', 'ion_auth') ?
@@ -54,14 +56,28 @@ class Auth extends CI_Controller {
 	//log the user in
 	function login()
 	{
+		
+	 $return = array();
+         if ($this->ion_auth->logged_in())
+	 {
+		//redirect them to the login page
+		$return['type'] = 'logedin';
+                header("Content-type: application/json");
+                echo json_encode($return);
+	}
+        else
+        {
+		
 		$this->data['title'] = "Login";
 
 		//validate form input
 		$this->form_validation->set_rules('identity', 'Identity', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
-
-		if ($this->form_validation->run() == true)
-		{
+		if (isset($_POST) && !empty($_POST))
+                {
+                    header("Content-type: application/json");
+                    if ($this->form_validation->run() == true)
+                    {
 			//check to see if the user is logging in
 			//check for "remember me"
 			$remember = (bool) $this->input->post('remember');
@@ -70,17 +86,27 @@ class Auth extends CI_Controller {
 			{
 				//if the login is successful
 				//redirect them back to the home page
-				$this->session->set_flashdata('message', $this->ion_auth->messages());
-				redirect('/', 'refresh');
+				//$this->session->set_flashdata('message', $this->ion_auth->messages());
+				//redirect('/', 'refresh');
+                             $return['type'] = 'sucess';
 			}
 			else
 			{
 				//if the login was un-successful
 				//redirect them back to the login page
-				$this->session->set_flashdata('message', $this->ion_auth->errors());
-				redirect('admin/auth/login', 'refresh'); //use redirects instead of loading views for compatibility with MY_Controller libraries
+                                $return['type'] = 'error';
+                                $return['message'] = $this->ion_auth->errors();
+				//$this->session->set_flashdata('message', $this->ion_auth->errors());
+				//redirect('admin/auth/login', 'refresh'); //use redirects instead of loading views for compatibility with MY_Controller libraries
 			}
-		}
+		  }
+                  else
+                  {
+                       $return['type'] = 'error';
+                       $return['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+                  }
+                        echo json_encode($return);
+                }
 		else
 		{
 			//the user is not logging in so display the login page
@@ -99,6 +125,8 @@ class Auth extends CI_Controller {
 
 			$this->_render_page('auth/login', $this->data);
 		}
+		
+	   }
 	}
 
 	//log the user out

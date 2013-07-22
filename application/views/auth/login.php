@@ -31,8 +31,8 @@
  <!-- <p><?php //echo form_submit('submit', lang('login_submit_btn'));?></p> -->
 
 <?php echo form_close();?>
-
-<p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
+<!-- <p><a href="javascript:void(0);" onclick="forgot_password();"><?php //echo lang('login_forgot_password');?></a></p> -->
+ <p><a href="admin/auth/forgot_password"><?php echo lang('login_forgot_password');?></a></p>
 </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal">Clear</button>

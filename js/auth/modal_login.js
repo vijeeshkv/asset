@@ -32,7 +32,7 @@ $(function() {
 function forgot_password() {
     $(".modal-body").hide('slow', function(){
         $(".modal-body").load("admin/auth/forgot_password", function(){
-            $(".modal-header h3").text("¿Olvidó su contraseña?");
+            $(".modal-header h3").text("Forgot Password");
             $(".modal-body").show('slow')
         });
     });

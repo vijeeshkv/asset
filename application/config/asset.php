@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
 |--------------------------------------------------------------------------
-| Zyght custom configuration file
+| Asset custom configuration file
 |--------------------------------------------------------------------------
 */
 $config['grado_relevancia_values'] = Array(
