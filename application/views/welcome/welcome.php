@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container" >
 <div class="row-fluid">
-<div class="span9">
-  	<div id="body" class="sideleftwidth" style="padding-top: 16px;">
+    <div class="span9" >
+  	<div id="body" class="" style="padding-top: 16px;" align="center">
 		<div class="carousel slide" id="myCarousel">
                 <ol class="carousel-indicators">
                   <li class="active" data-slide-to="0" data-target="#myCarousel"></li>

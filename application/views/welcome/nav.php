@@ -29,7 +29,7 @@
             </ul>-->
             <div class="pull-right">
                 <ul class="nav">
-                    <li><a href="javascript:void(0);" onclick="login();">Administración</a></li>
+                    <li><a href="javascript:void(0);" onclick="login();">Administrator Login</a></li>
                 </ul>
             </div>
           </div><!--/.nav-collapse -->

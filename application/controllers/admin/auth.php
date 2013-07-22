@@ -48,8 +48,8 @@ class Auth extends CI_Controller {
 			{
 				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
 			}
-
-			$this->_render_page('auth/index', $this->data);
+                        redirect('admin/dashboard/', 'refresh');
+			//$this->_render_page('auth/index', $this->data);
 		}
 	}
 
@@ -139,7 +139,8 @@ class Auth extends CI_Controller {
 
 		//redirect them to the login page
 		$this->session->set_flashdata('message', $this->ion_auth->messages());
-		redirect('auth/login', 'refresh');
+		//redirect('auth/login', 'refresh');
+                redirect('welcome', 'refresh');
 	}
 
 	//change password

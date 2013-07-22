@@ -14,8 +14,8 @@ class Welcome extends CI_Controller {
                 $this->data['site_title'] = $this->config->item('site_title', 'ion_auth'); 
                 $this->load->view('header',$this->data); 
                 $this->load->view('welcome/nav', $this->data); 
-				$this->load->view('welcome/welcome');
-                $this->load->view('footer',$this->data); 
+		$this->load->view('welcome/welcome');
+                $this->load->view('welcome/footer',$this->data);
 	}
 }
 
